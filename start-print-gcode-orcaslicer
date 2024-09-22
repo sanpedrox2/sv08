@@ -1,0 +1,10 @@
+G28
+G90
+M104 S0 ; Stops slicer from sending temp waits separately
+M140 S0
+SET_DISPLAY_TEXT MSG="Homing and Meshing"
+PRINT_START EXTRUDER=[first_layer_temperature] BED=[first_layer_bed_temperature]
+SET_DISPLAY_TEXT MSG="Prime nozzle."
+LINE_PURGE
+LCD_GREEN
+SET_DISPLAY_TEXT MSG="Printing!"
